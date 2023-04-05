@@ -23,7 +23,7 @@ let secretNumber;
 function displayMessage(message) {
   messageInfoEl.textContent = message;
 }
-function initialize() {
+function init() {
   score = 20;
   secretNumber = Math.trunc(Math.random() * 20 + 1);
   secretNumberEl.textContent = "?";
@@ -37,10 +37,10 @@ function initialize() {
   }
 }
 
-initialize();
+init();
 againBtnEl.addEventListener("click", function () {
   console.log("again button pressed");
-  initialize();
+  init();
 });
 
 checkBtnEl.addEventListener("click", checkSecretNumber);
